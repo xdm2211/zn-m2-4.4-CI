@@ -162,7 +162,7 @@ jobs:
         echo "release_tag=v$(date +"%Y.%m.%d.%H%M")/zn-m2/gecoosac-v2" >> $GITHUB_OUTPUT
         touch release.txt
         echo "ZN-M2 firmware mini+集客AC控制器 V2" >> release.txt
-        grep luci-app-gecoosac ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "Passwall " "`"$2"`"}' >> release.txt
+        grep luci-app-gecoosac ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "集客AC V2 " "`"$2"`"}' >> release.txt
         grep luci-app-gecoosac ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=精简版 + 集客AC V2 " $2}' >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
